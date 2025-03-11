@@ -1,9 +1,10 @@
 import React from "react";
+import Navbar from "./Components/Navbar";
 
 type Props = {};
 
-function App({}: Props) {
-  return <div>App</div>;
-}
+const App = ({}: Props) => {
+  return <Navbar />;
+};
 
 export default App;
