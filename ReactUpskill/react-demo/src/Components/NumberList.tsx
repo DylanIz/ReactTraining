@@ -1,11 +1,11 @@
 const NumberList = () => {
-  const numbers = [1, 2, 3, 4, 5];
+  const numbers = [1, 2, 3, 4, 5, 1];
 
   return (
     <>
       <main>
-        {numbers.map((number) => (
-          <p key={number}>Number {number}</p>
+        {numbers.map((number, index) => (
+          <li key={`${number}-${index}`}>Number {number}</li>
         ))}
       </main>
     </>
