@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import "./App.css";
-import Greeting from "./Components/Greeting";
-import ProductInfo from "./Components/ProductInfo";
+import NumberList from "./Components/NumberList";
 
 const App = () => {
   useEffect(() => {
@@ -10,8 +9,7 @@ const App = () => {
 
   return (
     <div className="app-container">
-      <Greeting />
-      <ProductInfo />
+      <NumberList />
     </div>
   );
 };
