@@ -11,9 +11,9 @@ const UserList = () => {
   return (
     <>
       <main>
-        {userInfo.map((user) => (
-          <li key={user.id}>
-            Name: {user.name} Age: {user.age}
+        {userInfo.map(({ id, name, age }) => (
+          <li key={id}>
+            Name: {name} Age: {age}
           </li>
         ))}
       </main>
