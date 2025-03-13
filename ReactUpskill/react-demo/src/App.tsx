@@ -1,12 +1,16 @@
 import WelcomeMessage from "./Components/WelcomeMessage";
+import { useEffect } from "react";
+import "./App.css";
 
-type Props = {};
+const App = () => {
+  useEffect(() => {
+    document.body.classList.add("dark-mode");
+  }, []);
 
-const App = ({}: Props) => {
   return (
-    <>
+    <div className="app-container">
       <WelcomeMessage />
-    </>
+    </div>
   );
 };
 

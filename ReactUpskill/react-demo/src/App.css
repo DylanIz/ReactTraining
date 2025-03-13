@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.app-container {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.theme-toggle {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+body.dark-mode .theme-toggle {
+  background-color: #f0f0f0;
+  color: #121212;
+}
