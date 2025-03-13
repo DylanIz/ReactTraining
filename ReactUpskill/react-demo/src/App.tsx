@@ -1,15 +1,11 @@
-import Footer from "./Components/Footer";
-import Header from "./Components/Header";
-import MainComponent from "./Components/MainComponent";
+import WelcomeMessage from "./Components/WelcomeMessage";
 
 type Props = {};
 
 const App = ({}: Props) => {
   return (
     <>
-      <Header />
-      <MainComponent />
-      <Footer />
+      <WelcomeMessage />
     </>
   );
 };
