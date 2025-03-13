@@ -3,7 +3,7 @@ type Props = {};
 const Footer = (props: Props) => {
   return (
     <footer className="footer">
-      <p>© 2024 My Website</p>
+      <p>© 2025 My Website</p>
     </footer>
   );
 };
