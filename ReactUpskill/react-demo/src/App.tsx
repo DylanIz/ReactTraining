@@ -8,7 +8,11 @@ const App = () => {
 
   return (
     <>
-      <div className="app-container"></div>
+      <div className="app-container">
+        <h1 style={{ color: "red", backgroundColor: "blue", padding: "2rem" }}>
+          Inline Style
+        </h1>
+      </div>
     </>
   );
 };
