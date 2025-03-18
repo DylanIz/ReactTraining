@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import "./App.css";
-import User from "./Components/User";
+import Person from "./Components/Person";
+import Products from "./Components/Products";
 
 const App = () => {
   useEffect(() => {
@@ -9,7 +10,8 @@ const App = () => {
 
   return (
     <div className="app-container">
-      <User name="John Doe" age={30} />
+      <Person name="Dylan" age={27}></Person>
+      <Products name="Laptop" price={1000}></Products>
     </div>
   );
 };

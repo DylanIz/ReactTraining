@@ -3,15 +3,15 @@ type Props = {
   age: number;
 };
 
-const User = ({ name, age }: Props) => {
+const Person = ({ name, age }: Props) => {
   return (
     <>
       <main>
-        <h1>{name}</h1>
+        <h2>{name}</h2>
         <p>{age}</p>
       </main>
     </>
   );
 };
 
-export default User;
+export default Person;
