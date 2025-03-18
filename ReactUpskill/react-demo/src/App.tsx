@@ -6,12 +6,16 @@ const App = () => {
     document.body.classList.add("dark-mode");
   }, []);
 
+  const styles = {
+    color: "red",
+    backgroundColor: "blue",
+    padding: "2rem",
+  };
+
   return (
     <>
       <div className="app-container">
-        <h1 style={{ color: "red", backgroundColor: "blue", padding: "2rem" }}>
-          Inline Style
-        </h1>
+        <h1 style={styles}>Inline Style</h1>
       </div>
     </>
   );
