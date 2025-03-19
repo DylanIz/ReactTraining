@@ -8,7 +8,7 @@ const Profile = (props: Props) => {
     age: 0,
   });
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
     const { name, value } = e.target;
 
