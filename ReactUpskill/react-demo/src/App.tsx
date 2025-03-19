@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import Counter from "./Components/Counter";
+import TodoList from "./Components/TodoList";
+import Profile from "./Components/Profile";
 
 const App = () => {
   useEffect(() => {
@@ -8,7 +11,11 @@ const App = () => {
 
   return (
     <>
-      <div className="app-container"></div>
+      <div className="app-container">
+        <Counter />
+        <TodoList />
+        <Profile />
+      </div>
     </>
   );
 };
