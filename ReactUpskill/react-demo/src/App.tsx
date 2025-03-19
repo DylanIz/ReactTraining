@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import Callback from "./Components/Callback";
+import CallbackTwo from "./Components/CallbackTwo";
 
 const App = () => {
   useEffect(() => {
@@ -10,7 +10,7 @@ const App = () => {
   return (
     <>
       <div className="app-container">
-        <Callback></Callback>
+        <CallbackTwo></CallbackTwo>
       </div>
     </>
   );
