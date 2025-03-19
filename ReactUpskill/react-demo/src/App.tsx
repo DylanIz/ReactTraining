@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import CallbackThree from "./Components/CallbackThree";
 
 const App = () => {
   useEffect(() => {
@@ -9,9 +8,7 @@ const App = () => {
 
   return (
     <>
-      <div className="app-container">
-        <CallbackThree></CallbackThree>
-      </div>
+      <div className="app-container"></div>
     </>
   );
 };
