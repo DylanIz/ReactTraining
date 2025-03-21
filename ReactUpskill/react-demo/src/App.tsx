@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import "./App.css";
-import Switcher from "./Components/Switcher";
 
 const App = () => {
   useEffect(() => {
@@ -10,7 +9,6 @@ const App = () => {
   return (
     <>
       <div className="app-container">
-        <Switcher />
       </div>
     </>
   );
