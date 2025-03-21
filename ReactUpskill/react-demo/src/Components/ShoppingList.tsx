@@ -9,6 +9,7 @@ const ShoppingList = (props: Props) => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!name || !quantity) return;
     setItems((prevItems) => [...prevItems, { name, quantity }]);
     setName("");
     setQuantity("");
