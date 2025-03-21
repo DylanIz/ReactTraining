@@ -1,4 +1,5 @@
 import React from "react";
+import PopUpContent from "./PopUpContent";
 
 type Props = {};
 
@@ -22,6 +23,7 @@ const CopyInput = (props: Props) => {
         onChange={(e) => setInputValue(e.target.value)}
       ></input>
       <button onClick={handleCopy}>Copy</button>
+      <PopUpContent copied={copied} />
     </div>
   );
 };
