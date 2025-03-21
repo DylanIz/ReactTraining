@@ -33,7 +33,6 @@ const Profile = (props: Props) => {
         value={profile.age}
         onChange={handleChange}
       ></input>
-      <button type="submit">Submit</button>
 
       <h2>Name:{profile.name}</h2>
       <h2>Age:{profile.age}</h2>
