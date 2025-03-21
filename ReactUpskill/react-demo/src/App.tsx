@@ -1,9 +1,5 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import "./App.css";
-import Counter from "./Components/Counter";
-import TodoList from "./Components/TodoList";
-import Profile from "./Components/Profile";
-import ShoppingList from "./Components/ShoppingList";
 
 const App = () => {
   useEffect(() => {
@@ -12,12 +8,7 @@ const App = () => {
 
   return (
     <>
-      <div className="app-container">
-        <Counter />
-        <TodoList />
-        <Profile />
-        <ShoppingList />
-      </div>
+      <div className="app-container"></div>
     </>
   );
 };
