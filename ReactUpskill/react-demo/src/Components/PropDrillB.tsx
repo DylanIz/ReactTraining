@@ -1,14 +1,10 @@
 import React from "react";
 import PropDrillC from "./PropDrillC";
 
-type Props = {
-  name: string;
-};
-
-const PropDrillB = ({name}: Props) => {
+const PropDrillB = () => {
   return (
     <div>
-      <PropDrillC name={name} />
+      <PropDrillC />
     </div>
   );
 };

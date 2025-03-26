@@ -1,11 +1,7 @@
 import PropDrillB from "./PropDrillB";
 
-type Props = {
-  name: string;
-};
-
-const PropDrillA = ({name}: Props) => {
-  return <div><PropDrillB name={name} /></div>;
+const PropDrillA = () => {
+  return <div><PropDrillB/></div>;
 };
 
 export default PropDrillA;

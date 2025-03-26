@@ -1,11 +1,14 @@
 import React from "react";
+import { Data } from "../App";
 
-type Props = {
-  name: string;
-};
-
-const PropDrillC = ({ name }: Props) => {
-  return <div>My name is {name}</div>;
+const PropDrillC = () => {
+  return (
+    <Data.Consumer>
+      {(name) => {
+        return <h1>My name is {name}</h1>;
+      }}
+    </Data.Consumer>
+  );
 };
 
 export default PropDrillC;
