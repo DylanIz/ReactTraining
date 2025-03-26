@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
-type Props = {};
-
-const DarkMode = (props: Props) => {
+const DarkMode = () => {
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
@@ -18,9 +16,9 @@ const DarkMode = (props: Props) => {
       <button
         onClick={() => setDarkMode((prev) => !prev)}
         style={{
-          position: "absolute",
+          position: "fixed",
           bottom: "10px",
-          left: "10px",
+          right: "10px",
         }}
       >
         {darkMode ? "Enable Dark Mode" : "Disable Dark Mode"}
