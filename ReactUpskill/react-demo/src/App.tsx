@@ -2,15 +2,15 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import DarkMode from "./Components/DarkMode";
 
-const App = () => {
-  const [data, setData] = useState([]);
+type Todo = {
+  userId: number;
+  id: number;
+  title: string;
+  completed: boolean;
+};
 
-  type Todo = {
-    userId: number;
-    id: number;
-    title: string;
-    completed: boolean;
-  };
+const App = () => {
+  const [data, setData] = useState<Todo[]>([]);
 
   useEffect(() => {
     async function getData() {
