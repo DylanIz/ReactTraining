@@ -13,7 +13,7 @@ const reducer = (state: { count: number }, action: { type: string }) => {
     case "decrement":
       return { ...state, count: state.count - 1 };
     default:
-      return state;
+      return initialState;
   }
 };
 
@@ -30,6 +30,7 @@ const App = () => {
         <button onClick={() => dispatch({ type: "decrement" })}>
           Decrement
         </button>
+        <button onClick={() => dispatch({ type: "reset" })}>Reset</button>
         <p>Count: {state.count}</p>
       </div>
     </>
