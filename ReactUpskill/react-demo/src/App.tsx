@@ -1,21 +1,15 @@
-import { useRef } from "react";
 import "./App.css";
 import DarkMode from "./Components/DarkMode";
+import FocusInput from "./Components/FocusInput";
+import Timer from "./Components/Timer";
 
 const App = () => {
-  const inputElement = useRef<HTMLInputElement>(null);
-
-  const handleFocus = () => {
-    inputElement.current?.focus();
-    inputElement.current!.value = "Dylan";
-  };
-
   return (
     <>
       <div className="app-container">
-        <input type="text" ref={inputElement} />
-        <button onClick={handleFocus}>Focus</button>
+        <FocusInput />
         <DarkMode />
+        <Timer />
       </div>
     </>
   );
