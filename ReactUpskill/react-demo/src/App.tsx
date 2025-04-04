@@ -1,19 +1,13 @@
 import "./App.css";
 import DarkMode from "./Components/DarkMode";
-import useFetchPosts from "./Hooks/useFetchPosts";
+import UniqueId from "./Components/UniqueId";
 
 const App = () => {
-  const data = useFetchPosts();
   return (
     <>
       <div className="app-container">
-        {data &&
-          data.map((item) => (
-            <div key={item.id}>
-              <h1>{item.title}</h1>
-            </div>
-          ))}
         <DarkMode />
+        <UniqueId />
       </div>
     </>
   );
