@@ -1,31 +1,14 @@
-import { useEffect, useState } from "react";
 import "./App.css";
 import DarkMode from "./Components/DarkMode";
-
-type Data = {
-  id: number;
-  title: string;
-  body: string;
-};
+import useFetchPosts from "./Hooks/useFetchPosts";
 
 const App = () => {
-  const [data, setData] = useState<Data[]>([]);
-
-  const getData = async () => {
-    const response = await fetch("https://jsonplaceholder.typicode.com/posts");
-    const data = await response.json();
-    setData(data);
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
-
+  const data = useFetchPosts();
   return (
     <>
       <div className="app-container">
         {data &&
-          data.map((item: Data) => (
+          data.map((item) => (
             <div key={item.id}>
               <h1>{item.title}</h1>
             </div>
