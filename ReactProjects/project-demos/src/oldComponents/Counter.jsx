@@ -10,8 +10,12 @@ const Counter = () => {
         <h1 className="number">{count}</h1>
       </div>
       <div className="btns-container">
-        <button className="btn">+</button>
-        <button className="btn">-</button>
+        <button onClick={() => setCount(count + 1)} className="btn">
+          +
+        </button>
+        <button onClick={() => setCount(count - 1)} className="btn">
+          -
+        </button>
       </div>
     </div>
   );
