@@ -1,9 +1,9 @@
-import Todo from "./components/Todo";
+import CounterMouseDown from "./oldComponents/CounterMouseDown";
 
 const App = () => {
   return (
     <>
-      <Todo />
+      <CounterMouseDown />
     </>
   );
 };
