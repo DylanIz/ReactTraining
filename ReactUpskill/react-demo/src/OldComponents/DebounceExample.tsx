@@ -1,17 +1,9 @@
 import * as React from "react";
+import { useDebounce } from "../Hooks/useDebounce";
 
 const DebounceExample = () => {
   const [inputField, setInputField] = React.useState<string>("");
-  const [debouncedField, setDebouncedField] = React.useState("");
-
-  React.useEffect(() => {
-    const timeoutHandler = setTimeout(() => {
-      setDebouncedField(inputField);
-    }, 1000);
-    return () => {
-      clearTimeout(timeoutHandler);
-    };
-  }, [inputField]);
+  const debouncedField = useDebounce(inputField, 1000);
 
   React.useEffect(() => {
     console.log("this only runs when the debounced field actually changes");
