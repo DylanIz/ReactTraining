@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-import styles from '../styles.css'
+import "../styles.css"
 
 const Meals = () => {
 
@@ -12,10 +12,22 @@ const Meals = () => {
         .catch(err => console.log(err))
     }, [])
 
-    console.log(meals)
+    const mealList = meals.map(({strMeal, strMealThumb, idMeal}) =>{
+        return(
+            <section className="card">
+                <img src={strMealThumb} alt={strMeal} />
+                <section className="content">
+                    <p>{strMeal}</p>
+                    <p>#{idMeal}</p>
+                </section>
+            </section>
+        )
+    })
 
   return (
-    <div>Meals</div>
+    <div className="items-container">
+        {mealList}
+    </div>
   )
 }
 
