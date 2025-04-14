@@ -1,9 +1,9 @@
-import CounterMouseDown from "./oldComponents/CounterMouseDown";
+import Meals from "./components/Meals";
 
 const App = () => {
   return (
     <>
-      <CounterMouseDown />
+      <Meals />
     </>
   );
 };
