@@ -1,10 +1,5 @@
-import { ToggleBackgroundColour } from "./components/ToggleBackgroundColour";
 const App = () => {
-  return (
-    <>
-      <ToggleBackgroundColour />
-    </>
-  );
+  return <></>;
 };
 
 export default App;
