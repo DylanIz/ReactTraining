@@ -1,5 +1,11 @@
+import HiddenSearchBar from "./components/HiddenSearchBar";
+
 const App = () => {
-  return <></>;
+  return (
+    <>
+      <HiddenSearchBar />
+    </>
+  );
 };
 
 export default App;
