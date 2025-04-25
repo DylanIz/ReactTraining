@@ -10,15 +10,16 @@ const Products = () => {
         <img
           src="https://m.media-amazon.com/images/I/6125yAfsJKL._AC_UX575_.jpg"
           alt="Shoe"
+          className="card-img"
         />
         <div className="card-details">
           <h3 className="card-title">Nike Air Monarch IV</h3>
           <section className="card-reviews">
-            <AiFillStar />
-            <AiFillStar />
-            <AiFillStar />
-            <AiFillStar />
-            <AiFillStar />
+            <AiFillStar className="rating-star" />
+            <AiFillStar className="rating-star" />
+            <AiFillStar className="rating-star" />
+            <AiFillStar className="rating-star" />
+            <AiFillStar className="rating-star" />
             <span className="total-reviews">123 reviews</span>
           </section>
           <section className="card-price">
@@ -28,7 +29,7 @@ const Products = () => {
             </div>
 
             <div className="bag">
-              <BsFillBagHeartFill />
+              <BsFillBagHeartFill className="bag-icon" />
             </div>
           </section>
         </div>
