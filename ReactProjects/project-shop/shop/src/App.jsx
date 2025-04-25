@@ -1,7 +1,12 @@
+import Nav from "./Nav/Nav";
+import Products from "./Products/Products";
+import Recommended from "./Recommended/Recommended";
 const App = () => {
   return (
     <>
-      <h1>Shop</h1>
+      <Nav />
+      <Products />
+      <Recommended />
     </>
   );
 };
