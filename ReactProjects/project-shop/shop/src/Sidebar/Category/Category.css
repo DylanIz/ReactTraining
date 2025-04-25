@@ -18,6 +18,9 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  font-size: 16px;
+  color: #333;
+  line-height: 20px;
 }
 
 .sidebar-label-container input {

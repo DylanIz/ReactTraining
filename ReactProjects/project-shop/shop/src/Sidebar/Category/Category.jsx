@@ -6,25 +6,29 @@ const Category = () => {
     <>
       <h2 className="sidebar-title">Category</h2>
 
-      <div>
+      <div className="sidebar-items">
         <label className="sidebar-label-container">
           <input type="radio" name="test" />
-          <span className="checkmark">Sneakers</span>
+          <span className="checkmark"></span>
+          Sneakers
         </label>
 
         <label className="sidebar-label-container">
           <input type="radio" name="test" />
-          <span className="checkmark">Flats</span>
+          <span className="checkmark"></span>
+          Flats
         </label>
 
         <label className="sidebar-label-container">
           <input type="radio" name="test" />
-          <span className="checkmark">Boots</span>
+          <span className="checkmark"></span>
+          Boots
         </label>
 
         <label className="sidebar-label-container">
           <input type="radio" name="test" />
-          <span className="checkmark">Sandals</span>
+          <span className="checkmark"></span>
+          Sandals
         </label>
       </div>
     </>

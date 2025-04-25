@@ -7,4 +7,5 @@
 .main-content {
   flex: 1;
   margin-left: 15%; /* This should match the width of the sidebar */
+  padding: 0 2rem; /* Add horizontal padding */
 }
