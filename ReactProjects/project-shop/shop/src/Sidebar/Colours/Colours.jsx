@@ -2,7 +2,7 @@ import React from "react";
 import "./Colours.css";
 import Input from "../../components/Input";
 
-const Colours = () => {
+const Colours = ({ handleInputChange }) => {
   return (
     <div className="ml">
       <div className="sidebar-title color-title">

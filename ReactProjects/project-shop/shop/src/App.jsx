@@ -62,9 +62,11 @@ const App = () => {
     );
   };
 
+  const result = filteredData(products, category, query);
+
   return (
     <div className="app-container">
-      <Sidebar />
+      <Sidebar handleInputChange={handleInputChange} />
       <div className="main-content">
         <Nav />
         <Recommended />
