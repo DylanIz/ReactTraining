@@ -1,34 +1,15 @@
 import React from "react";
 import "./Price.css";
-
+import Input from "../../components/Input";
 const Price = () => {
   return (
     <div className="ml">
       <h2 className="sidebar-title price-title">Price</h2>
 
-      <label className="sidebar-label-container">
-        <input type="radio" name="test2" />
-        <span className="checkmark"></span>
-        All
-      </label>
-
-      <label className="sidebar-label-container">
-        <input type="radio" name="test2" />
-        <span className="checkmark"></span>
-        50$ - 100$
-      </label>
-
-      <label className="sidebar-label-container">
-        <input type="radio" name="test2" />
-        <span className="checkmark"></span>
-        100$ - 150$
-      </label>
-
-      <label className="sidebar-label-container">
-        <input type="radio" name="test2" />
-        <span className="checkmark"></span>
-        150$ - 200$
-      </label>
+      <Input title="All" />
+      <Input title="50$ - 100$" />
+      <Input title="100$ - 150$" />
+      <Input title="150$ - 200$" />
     </div>
   );
 };

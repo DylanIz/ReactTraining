@@ -1,11 +1,11 @@
 import React from "react";
 
-const Input = () => {
+const Input = ({ title }) => {
   return (
     <label className="sidebar-label-container">
       <input type="radio" name="test2" />
       <span className="checkmark"></span>
-      All
+      {title}
     </label>
   );
 };
