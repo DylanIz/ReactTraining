@@ -45,7 +45,7 @@ const Colors = ({ handleInputChange }) => {
           name="test1"
           color="green"
         />
-        //ToDo fix positioning of white checkbox as it doesnt match others
+        {/* ToDo fix positioning of white checkbox as it doesnt match others */}
         <label className="sidebar-label-container white-checkbox">
           <input
             onChange={handleInputChange}

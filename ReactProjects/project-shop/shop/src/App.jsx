@@ -68,9 +68,9 @@ const App = () => {
     <div className="app-container">
       <Sidebar handleInputChange={handleInputChange} />
       <div className="main-content">
-        <Nav />
-        <Recommended />
-        <Products />
+        <Nav query={query} handleRadioChange={handleRadioChange} />
+        <Recommended handleClick={handleClick} />
+        <Products result={result} />
       </div>
     </div>
   );

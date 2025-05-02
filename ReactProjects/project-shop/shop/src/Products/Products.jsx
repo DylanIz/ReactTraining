@@ -1,16 +1,8 @@
 import React from "react";
 import "./Products.css";
-import Card from "../components/Card";
-import data from "../db/data.jsx";
 
-const Products = () => {
-  return (
-    <section className="card-container">
-      {data.map((item, index) => (
-        <Card key={index} {...item} />
-      ))}
-    </section>
-  );
+const Products = ({ result }) => {
+  return <section className="card-container">{result}</section>;
 };
 
 export default Products;
