@@ -5,3 +5,17 @@
 .all {
   background: linear-gradient(blue, crimson);
 }
+
+/* Style for white checkbox */
+.white-checkbox .checkmark {
+  border: 2px solid black;
+}
+
+.white-checkbox input:checked ~ .checkmark:after {
+  background: black !important;
+}
+
+/* Add specific styling for white checkbox mark */
+.white-checkbox .checkmark:after {
+  border-color: black;
+}

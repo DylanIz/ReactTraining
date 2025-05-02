@@ -17,7 +17,6 @@ const Colors = ({ handleInputChange }) => {
           <span className="checkmark all"></span>
           All
         </label>
-
         <Input
           handleInputChange={handleInputChange}
           value="black"
@@ -25,7 +24,6 @@ const Colors = ({ handleInputChange }) => {
           name="test1"
           color="black"
         />
-
         <Input
           handleInputChange={handleInputChange}
           value="blue"
@@ -33,7 +31,6 @@ const Colors = ({ handleInputChange }) => {
           name="test1"
           color="blue"
         />
-
         <Input
           handleInputChange={handleInputChange}
           value="red"
@@ -41,7 +38,6 @@ const Colors = ({ handleInputChange }) => {
           name="test1"
           color="red"
         />
-
         <Input
           handleInputChange={handleInputChange}
           value="green"
@@ -49,8 +45,8 @@ const Colors = ({ handleInputChange }) => {
           name="test1"
           color="green"
         />
-
-        <label className="sidebar-label-container">
+        //ToDo fix positioning of white checkbox as it doesnt match others
+        <label className="sidebar-label-container white-checkbox">
           <input
             onChange={handleInputChange}
             type="radio"
