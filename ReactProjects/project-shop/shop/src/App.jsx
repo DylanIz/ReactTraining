@@ -38,12 +38,22 @@ const App = () => {
 
     if (selected) {
       filteredProducts = filteredProducts.filter(
-        ({ category, color, company, newPrice, title }) =>
-          category === selected ||
-          color === selected ||
-          company === selected ||
-          newPrice === selected ||
-          title === selected
+        ({ category, color, company, newPrice, title }) => {
+          if (selected.includes(" - ")) {
+            const [min, max] = selected.split(" - ");
+            return (
+              parseInt(newPrice) >= parseInt(min) &&
+              parseInt(newPrice) <= parseInt(max)
+            );
+          }
+          return (
+            category === selected ||
+            color === selected ||
+            company === selected ||
+            newPrice === selected ||
+            title === selected
+          );
+        }
       );
     }
 
