@@ -5,7 +5,7 @@ import Category from "./Category/Category";
 import Price from "./Price/Price";
 import Colours from "./Colours/Colours";
 
-const Sidebar = ({ handleInputChange }) => {
+const Sidebar = ({ handleChange }) => {
   return (
     <>
       <section className="sidebar">
@@ -14,9 +14,9 @@ const Sidebar = ({ handleInputChange }) => {
             <BsCart />
           </h1>
         </div>
-        <Category handleInputChange={handleInputChange} />
-        <Price handleInputChange={handleInputChange} />
-        <Colours handleInputChange={handleInputChange} />
+        <Category handleChange={handleChange} />
+        <Price handleChange={handleChange} />
+        <Colours handleChange={handleChange} />
       </section>
     </>
   );

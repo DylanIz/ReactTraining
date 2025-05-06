@@ -1,14 +1,9 @@
 import React from "react";
 
-const Input = ({ handleInputChange, value, title, name, color }) => {
+const Input = ({ handleChange, value, title, name, color }) => {
   return (
     <label className="sidebar-label-container">
-      <input
-        type="radio"
-        name={name}
-        value={value}
-        onChange={handleInputChange}
-      />
+      <input type="radio" name={name} value={value} onChange={handleChange} />
       <span className="checkmark" style={{ backgroundColor: color }}></span>
       {title}
     </label>

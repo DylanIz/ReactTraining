@@ -21,7 +21,7 @@ const App = () => {
     return product.title.toLowerCase().indexOf(query.toLowerCase()) !== -1;
   });
 
-  const handleRadioChange = (e) => {
+  const handleChange = (e) => {
     setCategory(e.target.value);
   };
 
@@ -66,9 +66,9 @@ const App = () => {
 
   return (
     <div className="app-container">
-      <Sidebar handleInputChange={handleInputChange} />
+      <Sidebar handleChange={handleChange} />
       <div className="main-content">
-        <Nav query={query} handleRadioChange={handleRadioChange} />
+        <Nav query={query} handleInputChange={handleInputChange} />
         <Recommended handleClick={handleClick} />
         <Products result={result} />
       </div>
