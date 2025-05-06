@@ -9,7 +9,12 @@ import "./App.css";
 import Card from "./components/Card";
 
 const App = () => {
-  const [category, setCategory] = useState(null);
+  const [filters, setFilters] = useState({
+    category: null,
+    price: null,
+    color: null,
+    company: null,
+  });
 
   const [query, setQuery] = useState("");
 
@@ -22,39 +27,58 @@ const App = () => {
   });
 
   const handleChange = (e) => {
-    setCategory(e.target.value);
+    const value = e.target.value;
+    const name = e.target.name;
+
+    if (name === "test") {
+      setFilters({ ...filters, category: value });
+    } else if (name === "test1") {
+      setFilters({ ...filters, color: value });
+    } else if (name === "test2") {
+      setFilters({ ...filters, price: value });
+    } else if (name === "test3") {
+      setFilters({ ...filters, company: value });
+    }
   };
 
   const handleClick = (e) => {
-    setCategory(e.target.value);
+    setFilters({ ...filters, company: e.target.value });
   };
 
-  const filteredData = (products, selected, query) => {
+  const filteredData = (products, selectedFilters, query) => {
     let filteredProducts = products;
 
     if (query) {
       filteredProducts = filteredItems;
     }
 
-    if (selected) {
+    if (selectedFilters.category && selectedFilters.category !== "") {
       filteredProducts = filteredProducts.filter(
-        ({ category, color, company, newPrice, title }) => {
-          if (selected.includes(" - ")) {
-            const [min, max] = selected.split(" - ");
-            return (
-              parseInt(newPrice) >= parseInt(min) &&
-              parseInt(newPrice) <= parseInt(max)
-            );
-          }
-          return (
-            category === selected ||
-            color === selected ||
-            company === selected ||
-            newPrice === selected ||
-            title === selected
-          );
-        }
+        (product) => product.category === selectedFilters.category
       );
+    }
+
+    if (selectedFilters.color && selectedFilters.color !== "") {
+      filteredProducts = filteredProducts.filter(
+        (product) => product.color === selectedFilters.color
+      );
+    }
+
+    if (selectedFilters.company && selectedFilters.company !== "") {
+      filteredProducts = filteredProducts.filter(
+        (product) => product.company === selectedFilters.company
+      );
+    }
+
+    if (selectedFilters.price && selectedFilters.price !== "") {
+      if (selectedFilters.price.includes(" - ")) {
+        const [min, max] = selectedFilters.price.split(" - ");
+        filteredProducts = filteredProducts.filter(
+          (product) =>
+            parseInt(product.newPrice) >= parseInt(min) &&
+            parseInt(product.newPrice) <= parseInt(max)
+        );
+      }
     }
 
     return filteredProducts.map(
@@ -72,7 +96,7 @@ const App = () => {
     );
   };
 
-  const result = filteredData(products, category, query);
+  const result = filteredData(products, filters, query);
 
   return (
     <div className="app-container">
