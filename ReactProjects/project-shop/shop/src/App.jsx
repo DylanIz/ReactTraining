@@ -14,6 +14,7 @@ const App = () => {
     price: null,
     color: null,
     company: null,
+    recommended: null,
   });
 
   const [query, setQuery] = useState("");
@@ -42,7 +43,24 @@ const App = () => {
   };
 
   const handleClick = (e) => {
-    setFilters({ ...filters, company: e.target.value });
+    const value = e.target.value;
+    if (value === "") {
+      setFilters({
+        category: null,
+        price: null,
+        color: null,
+        company: null,
+        recommended: null,
+      });
+    } else {
+      setFilters({
+        category: null,
+        price: null,
+        color: null,
+        company: null,
+        recommended: value,
+      });
+    }
   };
 
   const filteredData = (products, selectedFilters, query) => {
@@ -66,7 +84,17 @@ const App = () => {
 
     if (selectedFilters.company && selectedFilters.company !== "") {
       filteredProducts = filteredProducts.filter(
-        (product) => product.company === selectedFilters.company
+        (product) =>
+          product.company.toLowerCase() ===
+          selectedFilters.company.toLowerCase()
+      );
+    }
+
+    if (selectedFilters.recommended && selectedFilters.recommended !== "") {
+      filteredProducts = filteredProducts.filter(
+        (product) =>
+          product.company.toLowerCase() ===
+          selectedFilters.recommended.toLowerCase()
       );
     }
 
