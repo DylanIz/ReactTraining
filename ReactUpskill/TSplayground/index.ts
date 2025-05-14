@@ -29,6 +29,7 @@ const res = double(15);
 console.log(res);
 */
 
+/*
 const multiply = (x: number, y: number) => {
   return x * y;
 };
@@ -36,3 +37,12 @@ const multiply = (x: number, y: number) => {
 const res = multiply(5, 5);
 
 console.log(res);
+*/
+
+const greet = (person: string = "Dylan") => {
+  return `Hello ${person}`;
+};
+
+console.log(greet());
+
+console.log(greet("John"));
