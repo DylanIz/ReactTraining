@@ -19,10 +19,20 @@ const res = addOne(4);
 console.log(res);
 */
 
+/*
 const double = (num: number) => {
   return num * 2;
 };
 
 const res = double(15);
+
+console.log(res);
+*/
+
+const multiply = (x: number, y: number) => {
+  return x * y;
+};
+
+const res = multiply(5, 5);
 
 console.log(res);
