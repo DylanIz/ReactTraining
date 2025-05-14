@@ -10,9 +10,19 @@ const person: Person = {
 console.log(person.name);
 */
 
+/*
 function addOne(num: number) {
   return num + 1;
 }
 
 const res = addOne(4);
+console.log(res);
+*/
+
+const double = (num: number) => {
+  return num * 2;
+};
+
+const res = double(15);
+
 console.log(res);
