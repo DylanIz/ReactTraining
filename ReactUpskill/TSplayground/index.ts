@@ -39,6 +39,7 @@ const res = multiply(5, 5);
 console.log(res);
 */
 
+/*
 const greet = (person: string = "Dylan") => {
   return `Hello ${person}`;
 };
@@ -46,3 +47,8 @@ const greet = (person: string = "Dylan") => {
 console.log(greet());
 
 console.log(greet("John"));
+*/
+
+const throwError = (msg: string): never => {
+  throw new Error(msg);
+};
