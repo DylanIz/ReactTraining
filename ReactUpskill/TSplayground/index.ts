@@ -49,6 +49,20 @@ console.log(greet());
 console.log(greet("John"));
 */
 
+/*
 const throwError = (msg: string): never => {
   throw new Error(msg);
 };
+*/
+
+const infiniteLoop = (): never => {
+  while (true) {}
+};
+
+let x: never;
+
+const neverReturn = (): never => {
+  while (true) {}
+};
+
+x = neverReturn();
