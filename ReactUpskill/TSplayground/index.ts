@@ -55,6 +55,7 @@ const throwError = (msg: string): never => {
 };
 */
 
+/*
 const infiniteLoop = (): never => {
   while (true) {}
 };
@@ -66,3 +67,4 @@ const neverReturn = (): never => {
 };
 
 x = neverReturn();
+*/
